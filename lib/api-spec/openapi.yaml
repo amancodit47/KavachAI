@@ -10,6 +10,14 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: dashboard
+    description: Dashboard and activity summaries
+  - name: projects
+    description: Code targets and repositories
+  - name: scans
+    description: Autonomous security scan runs
+  - name: findings
+    description: Vulnerabilities and proof evidence
 paths:
   /healthz:
     get:
@@ -24,7 +32,204 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /dashboard/summary:
+    get:
+      operationId: getDashboardSummary
+      tags: [dashboard]
+      summary: Get dashboard summary
+      responses:
+        "200":
+          description: Current system summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DashboardSummary"
+  /activity:
+    get:
+      operationId: listActivity
+      tags: [dashboard]
+      summary: List recent agent activity
+      responses:
+        "200":
+          description: Recent activity events
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ActivityEvent"
+  /projects:
+    get:
+      operationId: listProjects
+      tags: [projects]
+      summary: List protected projects
+      responses:
+        "200":
+          description: Project list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+    post:
+      operationId: createProject
+      tags: [projects]
+      summary: Register a project for scanning
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProjectInput"
+      responses:
+        "201":
+          description: Created project
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Project"
+  /projects/{id}:
+    get:
+      operationId: getProject
+      tags: [projects]
+      summary: Get a protected project
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Project details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Project"
+        "404":
+          description: Project not found
+  /scans:
+    get:
+      operationId: listScans
+      tags: [scans]
+      summary: List scan runs
+      parameters:
+        - name: projectId
+          in: query
+          required: false
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Scan list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Scan"
+    post:
+      operationId: createScan
+      tags: [scans]
+      summary: Start an autonomous scan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ScanInput"
+      responses:
+        "201":
+          description: Scan started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scan"
+  /scans/{id}:
+    get:
+      operationId: getScan
+      tags: [scans]
+      summary: Get scan progress and results
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Scan details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScanDetail"
+        "404":
+          description: Scan not found
+  /scans/{id}/rerun:
+    post:
+      operationId: rerunScan
+      tags: [scans]
+      summary: Re-run a scan against the same project
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "201":
+          description: New scan run
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scan"
+  /findings/{id}:
+    get:
+      operationId: getFinding
+      tags: [findings]
+      summary: Get finding evidence and remediation
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Finding details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FindingDetail"
+        "404":
+          description: Finding not found
+  /findings:
+    get:
+      operationId: listFindings
+      tags: [findings]
+      summary: List vulnerability findings
+      parameters:
+        - name: scanId
+          in: query
+          required: false
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Finding list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Finding"
+  /findings/{id}/patch:
+    post:
+      operationId: applyFindingPatch
+      tags: [findings]
+      summary: Apply and verify the generated patch
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Updated finding proof
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FindingDetail"
 components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: number
   schemas:
     HealthStatus:
       type: object
@@ -33,4 +238,173 @@ components:
           type: string
       required:
         - status
+    Project:
+      type: object
+      required: [id, name, sourceType, status, languages, lastScanAt, createdAt]
+      properties:
+        id: { type: number }
+        name: { type: string }
+        description: { type: string }
+        sourceType: { type: string }
+        sourceRef: { type: string }
+        status: { type: string }
+        languages:
+          type: array
+          items: { type: string }
+        lastScanAt: { type: ["string", "null"], format: date-time }
+        createdAt: { type: string, format: date-time }
+    ProjectInput:
+      type: object
+      required: [name, sourceType, sourceRef]
+      properties:
+        name: { type: string, minLength: 1 }
+        description: { type: string }
+        sourceType: { type: string, enum: [repository, archive, workspace] }
+        sourceRef: { type: string, minLength: 1 }
+        languages:
+          type: array
+          items: { type: string }
+    Scan:
+      type: object
+      required: [id, projectId, status, stage, progress, startedAt, completedAt, findingCount, assuranceScore]
+      properties:
+        id: { type: number }
+        projectId: { type: number }
+        projectName: { type: string }
+        status: { type: string, enum: [queued, running, completed, failed] }
+        stage: { type: string }
+        progress: { type: number }
+        startedAt: { type: string, format: date-time }
+        completedAt: { type: ["string", "null"], format: date-time }
+        findingCount: { type: number }
+        assuranceScore: { type: ["number", "null"] }
+    ScanInput:
+      type: object
+      required: [projectId]
+      properties:
+        projectId: { type: number }
+        mode: { type: string, enum: [autonomous, assisted] }
+    ScanDetail:
+      allOf:
+        - $ref: "#/components/schemas/Scan"
+        - type: object
+          required: [stages, findings, proof]
+          properties:
+            stages:
+              type: array
+              items:
+                $ref: "#/components/schemas/ScanStage"
+            findings:
+              type: array
+              items:
+                $ref: "#/components/schemas/Finding"
+            proof:
+              $ref: "#/components/schemas/ProofSummary"
+    ScanStage:
+      type: object
+      required: [key, label, status, detail]
+      properties:
+        key: { type: string }
+        label: { type: string }
+        status: { type: string, enum: [pending, running, complete, failed] }
+        detail: { type: string }
+        durationMs: { type: ["number", "null"] }
+    Finding:
+      type: object
+      required: [id, scanId, title, cwe, severity, file, line, function, status, confidence, summary]
+      properties:
+        id: { type: number }
+        scanId: { type: number }
+        title: { type: string }
+        cwe: { type: string }
+        severity: { type: string, enum: [critical, high, medium, low] }
+        file: { type: string }
+        line: { type: number }
+        function: { type: string }
+        status: { type: string, enum: [open, confirmed, patch_ready, verified] }
+        confidence: { type: number }
+        summary: { type: string }
+    FindingDetail:
+      allOf:
+        - $ref: "#/components/schemas/Finding"
+        - type: object
+          required: [rootCause, attackSurface, payload, evidence, beforeCode, afterCode, verification]
+          properties:
+            rootCause: { type: string }
+            attackSurface: { type: string }
+            payload: { type: string }
+            evidence:
+              type: array
+              items:
+                $ref: "#/components/schemas/Evidence"
+            beforeCode: { type: string }
+            afterCode: { type: string }
+            verification:
+              $ref: "#/components/schemas/Verification"
+    Evidence:
+      type: object
+      required: [label, value, status]
+      properties:
+        label: { type: string }
+        value: { type: string }
+        status: { type: string, enum: [pass, blocked, clean, info] }
+    Verification:
+      type: object
+      required: [exploitBefore, patchApplied, exploitAfter, regression, staticRescan, dynamicRetest, verdict]
+      properties:
+        exploitBefore: { type: string }
+        patchApplied: { type: string }
+        exploitAfter: { type: string }
+        regression: { type: string }
+        staticRescan: { type: string }
+        dynamicRetest: { type: string }
+        verdict: { type: string }
+    ProofSummary:
+      type: object
+      required: [score, reproduced, patched, blocked, regressionPassed, staticClean, dynamicClean]
+      properties:
+        score: { type: number }
+        reproduced: { type: boolean }
+        patched: { type: boolean }
+        blocked: { type: boolean }
+        regressionPassed: { type: boolean }
+        staticClean: { type: boolean }
+        dynamicClean: { type: boolean }
+    ActivityEvent:
+      type: object
+      required: [id, message, detail, kind, createdAt]
+      properties:
+        id: { type: number }
+        scanId: { type: ["number", "null"] }
+        message: { type: string }
+        detail: { type: string }
+        kind: { type: string, enum: [scan, finding, verification, system] }
+        createdAt: { type: string, format: date-time }
+    DashboardSummary:
+      type: object
+      required: [projects, scans, findings, severity, latestScan, assuranceTrend]
+      properties:
+        projects: { type: number }
+        scans: { type: number }
+        findings: { type: number }
+        severity:
+          type: object
+          required: [critical, high, medium, low]
+          properties:
+            critical: { type: number }
+            high: { type: number }
+            medium: { type: number }
+            low: { type: number }
+        latestScan:
+          anyOf:
+            - $ref: "#/components/schemas/Scan"
+            - type: "null"
+        assuranceTrend:
+          type: array
+          items:
+            type: object
+            required: [label, score]
+            properties:
+              label: { type: string }
+              score: { type: number }
 

@@ -1,0 +1,21 @@
+Kavach means shield: defensive by design
+Registration Open
+Competition Format:
+The AI Kavach is a data-centric innovative challenge designed to test participants' ability to build robust technological solutions/ models that can detect, analyse and solve real-world problems related to defence and national security.
+‍Build a cyber-reasoning system - an LLM laced with fuzzers, static and dynamic analysis, and a regression test harness - that autonomously finds a vulnerability, patches it, and proves the fix holds. The solutions worked out in the finale by the teams shall be pitched to run autonomously against specific customised infrastructure of the Indian Armed Forces.
+Participation guidelines:
+Who: Students, AI/ ML Professionals, Security Researchers, Armed Forces Personnel, Startups & Industry Professionals.
+‍Entry: Teams of maximum 3 members (including team-leader).
+‍Submission: Participants are required to submit a PowerPoint presentation (PPT) consisting of not more than 5 slides that clearly explains their proposed solution(including the tech stack). The presentation should be prepared in the following structure:
+‍
+   Slide 1-Introduction, Ideation & Brief Description: problem    statement overview, proposed idea and motivation, brief    description of the solution.
+   Slide 2- Detailed Methodology: step-by-step approach for    solving the challenge, implementation strategy and    workflow.
+   Slide 3- Technology Stack / Flow Diagram / Block Diagram /    Equipment Used: technologies, frameworks, and tools to be    used, system architecture, flowchart, or block diagram,    hardware/equipment (if applicable).
+   Slide 4- Salient Features & Novelty of the Proposed Project:    key features of the solution, innovation, uniqueness, and    advantages over existing approaches, the USP should be    clearly highlighted.
+   Slide 5- Final Deliverables: expected outcomes and project    deliverables, performance objectives, prototype, software,    model, or demonstration (as applicable), Proof-of-concept    to be submitted by the participants.
+‍
+‍Scoring: Evaluation for short listing shall be done by expert jury based on resource utilisation, novelty of idea, how light-weight the solution is.
+
+Grand Finale:
+During the in person 36-hour Grand Finale, shortlisted teams will build and refine their proposed solutions into working prototypes with support from mentors and provided resources. Solutions will be evaluated on performance, speed, precision, functionality, and scalability.
+The final prototypes will also be tested against a simulated Indian Armed Forces software environment to assess their effectiveness in realistic operational scenarios.

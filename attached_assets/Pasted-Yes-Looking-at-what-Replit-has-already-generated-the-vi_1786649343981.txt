@@ -1,0 +1,2098 @@
+Yes. Looking at what Replit has already generated, the **visual foundation is actually good**, but right now it looks more like a generic cybersecurity SaaS dashboard. For this hackathon, you need to turn it into a **serious autonomous cyber-reasoning / proof-of-fix platform** that directly maps to the AI Kavach problem statement and the Indian Army Terrier Cyber Quest 2026 context.
+
+The biggest change I would make is:
+
+> **Do not redesign it as just a dashboard. Redesign it as a working cyber-operation console where the UI visibly demonstrates the complete autonomous loop: Discover → Reason → Fuzz → Validate → Patch → Regression → Prove.**
+
+Also, the current UI contains things like **"24 surfaces"**, **"assurance baseline 96"**, etc. If these are not backed by actual functionality, they should not be presented as real metrics. The demo should clearly distinguish **live/verified results** from demo/sample data.
+
+Below is the **master prompt I would give directly to Replit Agent**. It is intentionally detailed so Replit understands that this is a **full product refactor, not merely a UI makeover**.
+
+# AI KAVACH — AUTONOMOUS CYBER-REASONING & PROOF-OF-FIX PLATFORM
+
+You are working on an existing project called **AI Kavach**.
+
+The current project already contains a dark cybersecurity dashboard UI with:
+
+* Overview
+* Protected Projects
+* Scan History
+* Security Desk
+* Project registration
+* Scan-related UI
+* Assurance score
+* Agent activity
+* Military Logistics API demo project
+
+The current UI is visually good but is currently too much like a generic cybersecurity SaaS dashboard.
+
+Your task is to **completely evolve the existing application into a polished, functional hackathon-grade autonomous cyber-reasoning platform** aligned with the following problem statement:
+
+> Build a cyber-reasoning system — an LLM laced with fuzzers, static and dynamic analysis, and a regression test harness — that autonomously finds a vulnerability, patches it, and proves the fix holds.
+
+The product will be presented in the **Indian Army Terrier Cyber Quest 2026 / AI Kavach context**, where the final prototype is expected to work against a simulated defence-oriented software environment and be evaluated for:
+
+* Performance
+* Speed
+* Precision
+* Functionality
+* Scalability
+* Resource utilisation
+* Novelty
+* Lightweight architecture
+
+The central product principle must be:
+
+# "DON'T JUST DETECT. PROVE THE FIX."
+
+The application should communicate that AI Kavach is an **autonomous cyber-reasoning and remediation system**, not merely a vulnerability scanner or AI chatbot.
+
+---
+
+# 1. CORE PRODUCT CONCEPT
+
+The entire application must revolve around this closed-loop workflow:
+
+```text
+TARGET REPOSITORY / APPLICATION
+          ↓
+RECONNAISSANCE
+          ↓
+STATIC ANALYSIS
+          ↓
+AI CYBER REASONING
+          ↓
+VULNERABILITY HYPOTHESIS
+          ↓
+AI-GUIDED FUZZING
+          ↓
+DYNAMIC VALIDATION
+          ↓
+VULNERABILITY CONFIRMED
+          ↓
+PATCH GENERATION
+          ↓
+PATCH APPLICATION
+          ↓
+REGRESSION TEST HARNESS
+          ↓
+POST-PATCH STATIC + DYNAMIC RESCAN
+          ↓
+INDEPENDENT VERIFICATION
+          ↓
+PROOF OF FIX
+          ↓
+EVIDENCE-GRADE SECURITY REPORT
+```
+
+This workflow must be visible throughout the product.
+
+The system should feel like an autonomous security engineer operating inside a secure environment.
+
+---
+
+# 2. IMPORTANT DESIGN PRINCIPLE
+
+Do NOT make the application look like:
+
+* a normal vulnerability scanner
+* a generic ChatGPT chatbot
+* a SIEM
+* a generic DevSecOps dashboard
+* a collection of disconnected charts
+
+Instead, make it feel like:
+
+**A cyber operations / security engineering console used to investigate, validate, remediate and prove vulnerabilities.**
+
+The UI should communicate:
+
+* precision
+* trust
+* evidence
+* autonomy
+* controlled execution
+* secure environment
+* explainability
+* operational readiness
+
+---
+
+# 3. VISUAL DESIGN SYSTEM
+
+Keep the strong visual foundation of the existing UI, but improve it significantly.
+
+## Overall aesthetic
+
+Use:
+
+* dark command-console aesthetic
+* near-black/navy background
+* subtle grid
+* subtle technical/cyber texture
+* restrained green accent
+* amber for warnings
+* red only for confirmed critical findings
+* blue/cyan for informational states
+* strong typography hierarchy
+* compact technical labels
+* monospace typography for technical metadata
+* clean modern sans-serif for headings
+
+Do NOT make it look like a gaming website.
+
+Do NOT use excessive neon.
+
+Do NOT use excessive glowing effects.
+
+The design should look appropriate for:
+
+* defence cybersecurity
+* SOC/Security Operations
+* critical infrastructure
+* secure engineering
+* enterprise security research
+
+---
+
+# 4. BRANDING
+
+Product name:
+
+# AI KAVACH
+
+Subtitle:
+
+**AUTONOMOUS CYBER-REASONING PLATFORM**
+
+Use the concept:
+
+> Kavach = Shield
+
+Main tagline:
+
+# "Proof, not promises."
+
+Secondary tagline:
+
+> "Find it. Prove it. Fix it. Prove it again."
+
+Do NOT falsely imply that this is an official Indian Army product.
+
+It should be clearly presented as:
+
+**AI Kavach — Competition Prototype**
+
+and optionally:
+
+**Built for Indian Army Terrier Cyber Quest 2026 / AI Kavach Challenge**
+
+Do not invent official government affiliations, certifications, security clearances, or operational deployments.
+
+---
+
+# 5. LEFT SIDEBAR
+
+Keep the existing sidebar concept but improve the navigation.
+
+Navigation should be:
+
+### COMMAND
+
+* Overview
+* Scan Room
+* Protected Projects
+* Vulnerability Findings
+* Verification Center
+
+### EVIDENCE
+
+* Agent Reasoning
+* Fuzzing Evidence
+* Patch History
+* Regression Results
+* Evidence Vault
+* Scan History
+
+### OPERATIONS
+
+* Security Desk
+* System Health
+* Configuration
+
+At the bottom:
+
+```text
+AI KAVACH
+COMPETITION PROTOTYPE
+
+SECURE ENVIRONMENT
+● ONLINE
+```
+
+Remove meaningless claims such as:
+
+"Reasoning agents are watching 24 surfaces"
+
+unless this is actually implemented.
+
+If a metric is simulated for demonstration, explicitly label it:
+
+**DEMO DATA**
+
+or
+
+**SIMULATION MODE**
+
+---
+
+# 6. TOP BAR
+
+Create a consistent top bar.
+
+Left:
+
+hamburger/menu
+
+Center:
+
+```text
+AI KAVACH
+SECURE ANALYSIS ENVIRONMENT
+```
+
+Right:
+
+```text
+● SANDBOX ACTIVE
+● EVIDENCE MODE
+UTC TIME
+USER
+```
+
+Add a small environment selector:
+
+```text
+ENVIRONMENT
+[ SIMULATION ▼ ]
+```
+
+Options:
+
+* Simulation
+* Local Analysis
+* Secure Sandbox
+
+Do not claim an actual air-gapped environment unless the application is genuinely configured that way.
+
+---
+
+# 7. OVERVIEW / COMMAND CENTER
+
+Redesign the current Overview page.
+
+The main heading should be:
+
+# Proof, not promises.
+
+Subheading:
+
+> Autonomous discovery, validation, remediation and verification for security-critical software.
+
+Primary CTA:
+
+# OPEN SCAN ROOM →
+
+Secondary CTA:
+
+# REGISTER TARGET
+
+Then show real metrics.
+
+Instead of arbitrary metrics, use:
+
+```text
+PROTECTED TARGETS
+1
+
+ACTIVE SCANS
+0
+
+FINDINGS
+3
+
+FIXES VERIFIED
+2
+```
+
+Additional cards:
+
+```text
+CRITICAL
+1
+
+HIGH
+1
+
+MEDIUM
+1
+
+VERIFICATION RATE
+100%
+```
+
+These values must come from the application state.
+
+If no real scans have been performed, show:
+
+```text
+0
+```
+
+rather than fake numbers.
+
+---
+
+# 8. OVERVIEW — AUTONOMY PIPELINE
+
+Add a prominent visual component:
+
+# AUTONOMOUS SECURITY LOOP
+
+Display:
+
+```text
+RECON
+  ↓
+STATIC ANALYSIS
+  ↓
+REASON
+  ↓
+FUZZ
+  ↓
+DYNAMIC VALIDATION
+  ↓
+PATCH
+  ↓
+REGRESSION
+  ↓
+VERIFY
+```
+
+Each stage should have a state:
+
+* NOT STARTED
+* RUNNING
+* PASSED
+* FAILED
+* VERIFIED
+
+When a scan is running, animate only the current stage.
+
+When completed, show:
+
+```text
+✓ VERIFIED
+```
+
+---
+
+# 9. SCAN ROOM — THIS IS THE MOST IMPORTANT SCREEN
+
+Create a dedicated page called:
+
+# SCAN ROOM
+
+This should be the heart of the entire product.
+
+The user should be able to:
+
+### Step 1 — Select Target
+
+```text
+TARGET
+Military Logistics API
+
+TYPE
+Repository
+
+LANGUAGE
+Python
+
+FRAMEWORK
+FastAPI
+
+STATUS
+READY
+```
+
+Allow:
+
+* upload ZIP
+* select registered project
+* local repository path
+* demo target
+
+---
+
+# 10. SCAN CONFIGURATION
+
+Before starting a scan:
+
+```text
+ANALYSIS PROFILE
+
+[x] Static Analysis
+[x] Dependency Analysis
+[x] AI Reasoning
+[x] AI-Guided Fuzzing
+[x] Dynamic Validation
+[x] Patch Generation
+[x] Regression Testing
+[x] Post-Patch Verification
+```
+
+Advanced settings:
+
+```text
+Maximum scan time
+Maximum fuzz iterations
+Sandbox memory
+Sandbox CPU
+Network policy
+Patch mode
+```
+
+Keep defaults lightweight.
+
+Add:
+
+```text
+MODE
+
+● AUTONOMOUS
+○ ASSISTED
+```
+
+Autonomous:
+AI can proceed through the entire workflow.
+
+Assisted:
+AI proposes remediation and waits for approval before applying the patch.
+
+---
+
+# 11. LIVE SCAN VIEW
+
+Once scanning starts, show a professional command-center interface.
+
+Left side:
+
+## PIPELINE
+
+```text
+✓ Repository indexed
+
+✓ Dependency graph built
+
+✓ Static analysis completed
+
+● AI reasoning
+
+○ Fuzzing
+
+○ Dynamic validation
+
+○ Patch generation
+
+○ Regression harness
+
+○ Final verification
+```
+
+Center:
+
+# AI SECURITY REASONING
+
+Show structured reasoning summaries.
+
+Do NOT expose hidden chain-of-thought.
+
+Instead show concise evidence-based explanations such as:
+
+```text
+OBSERVATION
+
+User-controlled input reaches the database query
+without parameterization.
+
+HYPOTHESIS
+
+Potential SQL injection in get_asset().
+
+EVIDENCE
+
+Static analysis identified string concatenation.
+Runtime validation is required.
+
+NEXT ACTION
+
+Generate targeted validation inputs.
+```
+
+The system must never display private chain-of-thought.
+
+Only show:
+
+* observations
+* evidence
+* hypotheses
+* actions
+* results
+* decisions
+
+---
+
+# 12. LIVE EVENT STREAM
+
+Add a technical event stream:
+
+```text
+19:26:31  INDEX     Repository indexed
+19:26:32  SAST      3 findings discovered
+19:26:34  AGENT     Hypothesis generated
+19:26:36  FUZZ      12 targeted inputs generated
+19:26:39  DYNAMIC   Anomalous response detected
+19:26:41  VERIFY    SQL injection reproduced
+19:26:43  PATCH     Remediation candidate generated
+19:26:45  TEST      Regression suite started
+19:26:49  VERIFY    Exploit blocked
+19:26:52  VERIFY    103/103 regression tests passed
+19:26:53  RESULT    FIX VERIFIED
+```
+
+Events must be generated from actual application state where possible.
+
+---
+
+# 13. VULNERABILITY FINDINGS PAGE
+
+Create a dedicated:
+
+# FINDINGS
+
+Each finding should be a detailed card/table.
+
+Columns:
+
+```text
+SEVERITY
+VULNERABILITY
+CWE
+TARGET
+LOCATION
+CONFIDENCE
+STATUS
+```
+
+Example:
+
+```text
+CRITICAL
+SQL Injection
+CWE-89
+UserRepository.py:142
+97%
+FIX VERIFIED
+```
+
+Severity badges:
+
+* CRITICAL
+* HIGH
+* MEDIUM
+* LOW
+* INFO
+
+---
+
+# 14. VULNERABILITY DETAIL PAGE
+
+Clicking a finding must open a detailed investigation screen.
+
+Sections:
+
+## FINDING SUMMARY
+
+```text
+SQL Injection
+
+CWE-89
+
+Severity
+CRITICAL
+
+Confidence
+97%
+
+Status
+FIX VERIFIED
+```
+
+## ATTACK SURFACE
+
+Show:
+
+```text
+Endpoint:
+GET /assets?id=<input>
+
+Parameter:
+id
+
+Source:
+HTTP request
+
+Sink:
+SQL query
+```
+
+## ROOT CAUSE
+
+Provide concise explanation.
+
+## STATIC EVIDENCE
+
+Show:
+
+* file
+* line
+* function
+* code snippet
+* SAST tool
+* rule
+
+## DYNAMIC EVIDENCE
+
+Show:
+
+* test input
+* request
+* response
+* runtime behavior
+* stack trace if applicable
+
+---
+
+# 15. FUZZING EVIDENCE
+
+Create a dedicated section:
+
+# AI-GUIDED FUZZING
+
+Show:
+
+```text
+INPUT CLASS
+SQL Injection
+
+GENERATED CASES
+47
+
+EXECUTED
+47
+
+INTERESTING CASES
+3
+
+CONFIRMED
+1
+```
+
+Show sample test cases.
+
+Example:
+
+```text
+CASE #017
+Input:
+<redacted/safe test payload>
+
+Result:
+ANOMALOUS RESPONSE
+
+Confidence:
+0.94
+```
+
+The UI should make it clear that fuzzing is **targeted using program analysis and AI reasoning**, rather than random blind fuzzing.
+
+---
+
+# 16. DYNAMIC ANALYSIS PAGE
+
+Create:
+
+# DYNAMIC VALIDATION
+
+Display:
+
+```text
+SANDBOX
+
+STATUS
+● ACTIVE
+
+CONTAINER
+kavach-target-01
+
+CPU
+18%
+
+MEMORY
+312 MB
+
+NETWORK
+ISOLATED
+```
+
+Show:
+
+* execution logs
+* HTTP requests/responses
+* crashes
+* exceptions
+* coverage
+* runtime events
+
+Use safe mock/demo data when running without the actual backend.
+
+---
+
+# 17. PATCH CENTER
+
+Create:
+
+# PATCH CENTER
+
+When a vulnerability is confirmed, show:
+
+```text
+ROOT CAUSE
+SQL query constructed using untrusted input.
+```
+
+Then:
+
+### BEFORE
+
+Show vulnerable code.
+
+### AFTER
+
+Show proposed secure code.
+
+### DIFF
+
+Use a proper code diff interface.
+
+Example:
+
+```diff
+- query = "SELECT ... " + user_id
++ query = "SELECT ... WHERE id = ?"
++ cursor.execute(query, (user_id,))
+```
+
+Buttons:
+
+```text
+[ REVIEW PATCH ]
+
+[ APPLY PATCH ]
+
+[ REJECT ]
+```
+
+For autonomous mode:
+
+```text
+PATCH APPLIED
+```
+
+---
+
+# 18. REGRESSION TEST HARNESS
+
+This must be a first-class feature.
+
+Create:
+
+# REGRESSION HARNESS
+
+Show:
+
+```text
+TEST SUITE
+
+Security Reproduction       ✓
+Unit Tests                  ✓
+Integration Tests           ✓
+API Tests                   ✓
+Original Exploit            ✓ BLOCKED
+Static Re-scan              ✓ CLEAN
+Dynamic Re-test             ✓ CLEAN
+```
+
+Show:
+
+```text
+103 / 103 TESTS PASSED
+```
+
+But only show the actual number when produced by the system.
+
+Include:
+
+```text
+BEFORE PATCH
+Vulnerability reproduced
+
+AFTER PATCH
+Vulnerability blocked
+```
+
+This before/after comparison should be visually prominent.
+
+---
+
+# 19. VERIFICATION CENTER
+
+Create a dedicated page:
+
+# PROOF OF FIX
+
+This is the signature feature of AI Kavach.
+
+Show a large verification status:
+
+# ✓ FIX VERIFIED
+
+Then:
+
+```text
+Vulnerability Reproduced        ✓
+
+Root Cause Confirmed             ✓
+
+Patch Applied                    ✓
+
+Original Exploit Re-tested       ✓ BLOCKED
+
+Regression Suite                 ✓ PASSED
+
+Static Re-scan                   ✓ CLEAN
+
+Dynamic Re-test                  ✓ CLEAN
+```
+
+Then show:
+
+# KAVACH ASSURANCE SCORE
+
+Example:
+
+```text
+96 / 100
+```
+
+But calculate this score from actual verification signals.
+
+Do not simply hardcode 96.
+
+---
+
+# 20. ASSURANCE SCORE MODEL
+
+Create a transparent internal score.
+
+Example:
+
+```text
+Static Evidence            20
+Dynamic Validation         20
+Exploit Reproduction       20
+Patch Validation           20
+Regression Testing         10
+Post-Patch Re-scan         10
+--------------------------------
+TOTAL                     100
+```
+
+Display exactly how the score was calculated.
+
+Label it:
+
+**AI Kavach Assurance Score — Internal Prototype Metric**
+
+Do not claim that this is an official competition metric.
+
+---
+
+# 21. EVIDENCE VAULT
+
+Create:
+
+# EVIDENCE VAULT
+
+Every security conclusion should have evidence attached.
+
+For each finding store:
+
+```text
+Finding ID
+Timestamp
+Source file
+Line
+Static analyzer result
+Reasoning decision
+Fuzz test
+Dynamic result
+Patch diff
+Regression result
+Verification result
+```
+
+Allow:
+
+```text
+VIEW EVIDENCE
+EXPORT REPORT
+```
+
+---
+
+# 22. AGENT TRAIL
+
+Create a page:
+
+# AGENT TRAIL
+
+Show the sequence of actions taken by the autonomous agent.
+
+Example:
+
+```text
+19:26:31
+Repository indexed
+
+19:26:32
+SAST executed
+
+19:26:34
+Potential CWE-89 identified
+
+19:26:35
+Attack surface mapped
+
+19:26:37
+Targeted fuzzing initiated
+
+19:26:41
+Dynamic exploit confirmed
+
+19:26:43
+Patch generated
+
+19:26:45
+Patch applied
+
+19:26:49
+Regression suite completed
+
+19:26:53
+Post-patch scan clean
+
+19:26:54
+FIX VERIFIED
+```
+
+This makes the autonomy visible to judges.
+
+---
+
+# 23. PROJECT REGISTRATION
+
+Keep the existing Protected Projects page but make registration functional.
+
+Fields:
+
+```text
+PROJECT NAME
+DESCRIPTION
+REPOSITORY / ZIP
+LANGUAGE
+FRAMEWORK
+ENTRY POINT
+TARGET TYPE
+```
+
+Target types:
+
+* REST API
+* Web Application
+* CLI Application
+* Backend Service
+* Repository
+
+Add:
+
+```text
+SECURITY PROFILE
+
+Defence / Critical Infrastructure
+Enterprise Application
+General Application
+Custom
+```
+
+Do not claim actual defence classification.
+
+---
+
+# 24. DEMO TARGET
+
+Keep the existing:
+
+# Military Logistics API
+
+but make it explicitly a:
+
+**Simulated Defence-Oriented Demo Target**
+
+Description:
+
+> Intentionally vulnerable training application representing a logistics asset-management API. Used exclusively for controlled demonstration and validation.
+
+Include several deliberately planted vulnerabilities for the demo.
+
+Prefer vulnerabilities such as:
+
+1. SQL injection
+2. Path traversal
+3. Broken authorization
+4. Command injection
+5. Unsafe file handling
+
+Do not expose or implement real-world attack capability against external systems.
+
+All testing must occur against the local simulated target.
+
+---
+
+# 25. DEMO MODE
+
+Create a highly polished:
+
+# DEMO MODE
+
+This is extremely important for the 36-hour finale presentation.
+
+Add:
+
+```text
+START LIVE DEMONSTRATION
+```
+
+When clicked, the application should run a controlled end-to-end demonstration.
+
+Example:
+
+```text
+TARGET
+Military Logistics API
+
+[ START AUTONOMOUS SCAN ]
+```
+
+Then animate the actual workflow:
+
+```text
+RECON
+       ✓
+
+STATIC ANALYSIS
+       ✓
+
+AI REASONING
+       ✓
+
+TARGETED FUZZING
+       ✓
+
+DYNAMIC VALIDATION
+       ✓
+
+VULNERABILITY CONFIRMED
+       ✓
+
+PATCH GENERATED
+       ✓
+
+PATCH APPLIED
+       ✓
+
+REGRESSION TESTING
+       ✓
+
+POST-PATCH SCAN
+       ✓
+
+PROOF OF FIX
+       ✓
+```
+
+End with a large:
+
+# FIX VERIFIED
+
+This should be the centerpiece of the competition demo.
+
+---
+
+# 26. PERFORMANCE METRICS
+
+Because the competition evaluates speed and resource utilisation, add a:
+
+# PERFORMANCE
+
+page/panel.
+
+Track:
+
+```text
+SCAN TIME
+STATIC ANALYSIS TIME
+AI REASONING TIME
+FUZZING TIME
+DYNAMIC ANALYSIS TIME
+PATCH TIME
+REGRESSION TIME
+TOTAL TIME
+```
+
+Also:
+
+```text
+CPU
+MEMORY
+CONTAINER COUNT
+FUZZ CASES
+TEST CASES
+```
+
+Show:
+
+```text
+TOTAL ANALYSIS TIME
+18.4 sec
+
+PEAK MEMORY
+420 MB
+
+FUZZ CASES
+128
+
+REGRESSION TESTS
+103
+```
+
+Only show real values when available.
+
+---
+
+# 27. LIGHTWEIGHT ARCHITECTURE
+
+The hackathon explicitly values lightweight solutions.
+
+Therefore do NOT create unnecessary microservices.
+
+Use a simple architecture:
+
+```text
+React / TypeScript
+        ↓
+FastAPI
+        ↓
+Agent Orchestrator
+        ↓
+Security Tool Layer
+ ┌──────┼─────────┐
+ ↓      ↓         ↓
+SAST   Fuzzer   Runtime
+        ↓
+Docker Sandbox
+        ↓
+Regression Engine
+        ↓
+Verification Engine
+```
+
+Prefer a modular monolith for the prototype.
+
+Do not introduce Kubernetes unless absolutely necessary.
+
+---
+
+# 28. AI AGENT TOOL ARCHITECTURE
+
+The AI agent should conceptually have access to controlled tools:
+
+```text
+read_file()
+search_code()
+inspect_ast()
+run_sast()
+scan_dependencies()
+map_attack_surface()
+generate_fuzz_cases()
+execute_in_sandbox()
+inspect_runtime()
+generate_patch()
+apply_patch()
+run_tests()
+run_regression()
+run_post_patch_scan()
+verify_fix()
+generate_report()
+```
+
+The LLM should orchestrate these tools.
+
+Never give the LLM unrestricted host-machine shell access.
+
+All generated code and security tests must run inside a controlled sandbox.
+
+---
+
+# 29. AGENT STATE MACHINE
+
+Implement a clear state machine:
+
+```text
+IDLE
+ ↓
+RECON
+ ↓
+ANALYZE
+ ↓
+REASON
+ ↓
+VALIDATE
+ ↓
+CONFIRM
+ ↓
+PATCH
+ ↓
+REGRESSION
+ ↓
+VERIFY
+ ↓
+REPORT
+```
+
+If verification fails:
+
+```text
+VERIFY
+ ↓
+FAILED
+ ↓
+REASON AGAIN
+ ↓
+GENERATE NEW PATCH
+ ↓
+REGRESSION
+ ↓
+VERIFY
+```
+
+Set a maximum remediation loop count to prevent infinite execution.
+
+---
+
+# 30. SECURITY AND SAFETY
+
+This is a cybersecurity competition project.
+
+Build the application defensively.
+
+Requirements:
+
+* isolated execution
+* Docker sandbox
+* CPU limits
+* memory limits
+* timeout
+* restricted network
+* no unrestricted host shell
+* no arbitrary external target scanning
+* local/simulated target by default
+* audit logging
+* safe file handling
+
+Add an explicit UI indicator:
+
+```text
+TARGET POLICY
+LOCAL / AUTHORIZED TARGETS ONLY
+```
+
+---
+
+# 31. SECURITY REPORT
+
+Add:
+
+# EXPORT SECURITY REPORT
+
+Generate a professional report containing:
+
+```text
+AI KAVACH
+Security Verification Report
+
+Target
+Scan ID
+Timestamp
+
+Executive Summary
+
+Findings
+
+Root Cause
+
+Static Evidence
+
+Dynamic Evidence
+
+Fuzzing Evidence
+
+Patch Diff
+
+Regression Results
+
+Post-Patch Verification
+
+Assurance Score
+
+Performance Metrics
+
+Final Verdict
+```
+
+The final verdict should be:
+
+```text
+FIX VERIFIED
+```
+
+or:
+
+```text
+VERIFICATION FAILED
+```
+
+Never report "verified" merely because an LLM says the patch is correct.
+
+Verification must depend on actual test results.
+
+---
+
+# 32. SCAN HISTORY
+
+Create a professional timeline/table:
+
+```text
+SCAN ID
+TARGET
+DATE
+FINDINGS
+FIXES
+STATUS
+DURATION
+ASSURANCE
+```
+
+Example:
+
+```text
+KV-2026-001
+Military Logistics API
+14 Aug 2026
+3 findings
+2 verified
+COMPLETED
+18.4s
+96/100
+```
+
+Use actual application state.
+
+---
+
+# 33. SETTINGS
+
+Add:
+
+### AI Configuration
+
+* model
+* temperature
+* token budget
+* local/remote mode
+
+### Sandbox
+
+* CPU limit
+* memory limit
+* timeout
+* network policy
+
+### Analysis
+
+* SAST tools
+* fuzzing iterations
+* regression timeout
+
+### Security
+
+* audit logging
+* autonomous patch approval
+* target allowlist
+
+Do not expose API keys in the frontend.
+
+---
+
+# 34. DATA MODEL
+
+Create proper persistent state for:
+
+```text
+Project
+Scan
+Finding
+Evidence
+AgentEvent
+FuzzCase
+Patch
+TestResult
+Verification
+PerformanceMetric
+```
+
+Relationships:
+
+```text
+Project
+  ↓
+Scan
+  ↓
+Finding
+  ↓
+Evidence
+  ↓
+Patch
+  ↓
+Test Results
+  ↓
+Verification
+```
+
+---
+
+# 35. API DESIGN
+
+Create clean backend endpoints such as:
+
+```text
+POST   /api/projects
+GET    /api/projects
+
+POST   /api/scans
+GET    /api/scans
+GET    /api/scans/:id
+
+GET    /api/scans/:id/events
+GET    /api/scans/:id/findings
+
+GET    /api/findings/:id
+GET    /api/findings/:id/evidence
+
+POST   /api/findings/:id/validate
+POST   /api/findings/:id/patch
+
+POST   /api/scans/:id/regression
+POST   /api/scans/:id/verify
+
+GET    /api/scans/:id/metrics
+GET    /api/scans/:id/report
+```
+
+Use WebSockets or Server-Sent Events for live scan updates if practical.
+
+---
+
+# 36. FRONTEND REQUIREMENTS
+
+Use the existing project's framework if already established.
+
+Prefer:
+
+* React
+* TypeScript
+* Tailwind CSS
+* reusable components
+* accessible components
+* responsive layout
+* charts only where useful
+* syntax highlighting
+* code diff component
+* live event stream
+
+Do NOT rewrite the entire application unnecessarily if existing components can be reused.
+
+Refactor intelligently.
+
+---
+
+# 37. UX REQUIREMENT
+
+Every important action should have a visible result.
+
+For example:
+
+User clicks:
+
+```text
+START SCAN
+```
+
+The UI must actually:
+
+```text
+create scan
+→ update state
+→ show progress
+→ show findings
+→ show evidence
+→ show patch
+→ show tests
+→ show verification
+```
+
+Avoid buttons that only produce visual animations without changing application state.
+
+If a real backend integration is not available, implement a deterministic local simulation layer that follows the exact same state machine and clearly labels the environment as simulation.
+
+The simulation must still feel like a real system.
+
+---
+
+# 38. IMPORTANT — DEMO DATA VS REAL DATA
+
+This is critical.
+
+Never silently fabricate:
+
+* vulnerability counts
+* scan counts
+* assurance scores
+* test counts
+* performance metrics
+* agent activity
+
+If the data is simulated:
+
+Display:
+
+```text
+SIMULATION MODE
+```
+
+If generated by actual analysis:
+
+Display:
+
+```text
+LIVE ANALYSIS
+```
+
+The UI should make this distinction obvious.
+
+---
+
+# 39. HACKATHON POSITIONING
+
+The application should visually and functionally demonstrate the exact problem statement:
+
+### LLM
+
+AI Cyber Reasoning Engine
+
+### Fuzzer
+
+AI-guided targeted fuzzing
+
+### Static Analysis
+
+SAST + dependency analysis
+
+### Dynamic Analysis
+
+Sandboxed runtime validation
+
+### Regression Test Harness
+
+Automated regression + security tests
+
+### Autonomous Remediation
+
+AI-generated patch
+
+### Proof
+
+Independent post-patch verification
+
+This mapping should be visible in the UI.
+
+Create a small section:
+
+# CAPABILITY MATRIX
+
+```text
+LLM REASONING             ✓
+STATIC ANALYSIS           ✓
+DYNAMIC ANALYSIS          ✓
+AI-GUIDED FUZZING         ✓
+AUTOMATED PATCHING        ✓
+REGRESSION HARNESS        ✓
+PROOF OF FIX              ✓
+SANDBOXED EXECUTION       ✓
+PERFORMANCE TELEMETRY     ✓
+```
+
+---
+
+# 40. SPECIAL COMPETITION DEMO
+
+The competition is not just about making a beautiful application.
+
+The final prototype will be judged in a realistic simulated defence-oriented environment.
+
+Therefore create a dedicated:
+
+# OPERATIONAL READINESS
+
+section.
+
+Show:
+
+```text
+TARGET
+Simulated Defence Software
+
+ANALYSIS MODE
+Autonomous
+
+EXECUTION
+Sandboxed
+
+NETWORK
+Restricted
+
+SOURCE CODE
+Local
+
+EVIDENCE
+Immutable Session Record
+
+PATCH MODE
+Controlled
+
+VERIFICATION
+Independent
+```
+
+This communicates that the architecture is suitable for security-sensitive environments without making unsupported claims about actual military deployment.
+
+---
+
+# 41. FINAL DASHBOARD STATE
+
+After a successful run, the overview should communicate:
+
+```text
+MISSION COMPLETE
+
+Target:
+Military Logistics API
+
+Findings:
+3
+
+Critical:
+1
+
+Patched:
+2
+
+Verified:
+2
+
+Regression:
+103 / 103
+
+Static Re-scan:
+CLEAN
+
+Dynamic Re-test:
+CLEAN
+
+Assurance:
+96 / 100
+
+Total Time:
+18.4 sec
+
+FINAL STATUS
+
+✓ FIX VERIFIED
+```
+
+This should be visually impressive but technically honest.
+
+---
+
+# 42. REMOVE / CHANGE FROM CURRENT UI
+
+Specifically review the current UI and change the following:
+
+REMOVE OR REPLACE:
+
+* generic "24 surfaces" messaging
+* arbitrary hardcoded assurance numbers
+* arbitrary scan counts
+* meaningless charts
+* generic SaaS wording
+* excessive dashboard cards
+* fake agent activity
+* fake security claims
+
+REPLACE WITH:
+
+* autonomous security pipeline
+* live scan state
+* evidence
+* vulnerability investigation
+* fuzzing evidence
+* dynamic validation
+* patch diff
+* regression testing
+* proof-of-fix
+* performance metrics
+* operational readiness
+
+---
+
+# 43. MOST IMPORTANT UI COMPONENT
+
+Create a reusable component:
+
+# ProofOfFixCard
+
+It should visually summarize:
+
+```text
+┌──────────────────────────────────────────┐
+│ ✓ FIX VERIFIED                           │
+│                                          │
+│ SQL Injection / CWE-89                   │
+│                                          │
+│ Exploit reproduced       ✓               │
+│ Root cause confirmed     ✓               │
+│ Patch applied            ✓               │
+│ Exploit blocked          ✓               │
+│ Regression tests         103/103 ✓       │
+│ Static re-scan            CLEAN ✓        │
+│ Dynamic re-test           CLEAN ✓        │
+│                                          │
+│ Assurance Score                          │
+│                96 / 100                  │
+└──────────────────────────────────────────┘
+```
+
+This component should appear in:
+
+* Overview
+* Finding detail
+* Verification Center
+* Final demo
+
+---
+
+# 44. FINAL DEMO FLOW
+
+Make sure the complete application supports this exact 3–5 minute presentation:
+
+### STEP 1
+
+Open AI Kavach.
+
+### STEP 2
+
+Select:
+
+```text
+Military Logistics API
+```
+
+### STEP 3
+
+Open Scan Room.
+
+### STEP 4
+
+Click:
+
+```text
+AUTONOMOUS SCAN
+```
+
+### STEP 5
+
+Show:
+
+```text
+Static Analysis
+        ↓
+AI Reasoning
+        ↓
+Fuzzing
+        ↓
+Dynamic Validation
+```
+
+### STEP 6
+
+Show confirmed vulnerability.
+
+### STEP 7
+
+Open evidence.
+
+### STEP 8
+
+Show AI-generated patch.
+
+### STEP 9
+
+Apply patch.
+
+### STEP 10
+
+Run regression harness.
+
+### STEP 11
+
+Re-run original exploit.
+
+Show:
+
+```text
+EXPLOIT BEFORE PATCH
+✓ REPRODUCED
+
+EXPLOIT AFTER PATCH
+✗ BLOCKED
+```
+
+### STEP 12
+
+Show:
+
+# FIX VERIFIED
+
+### STEP 13
+
+Show performance and assurance metrics.
+
+### STEP 14
+
+Export security report.
+
+This must be the smoothest path through the application.
+
+---
+
+# 45. IMPLEMENTATION PRIORITY
+
+Do not spend all development time on visual polish.
+
+Priority:
+
+## P0 — MUST WORK
+
+1. Project registration
+2. Scan creation
+3. Autonomous pipeline
+4. Static analysis integration
+5. Vulnerability findings
+6. AI reasoning layer
+7. Fuzzing layer
+8. Sandbox/dynamic validation
+9. Patch generation
+10. Regression harness
+11. Proof-of-fix
+12. Scan history
+
+## P1 — HIGH VALUE
+
+13. Live event stream
+14. Evidence vault
+15. Agent trail
+16. Performance metrics
+17. Security report
+18. Demo mode
+
+## P2 — POLISH
+
+19. Animations
+20. advanced charts
+21. additional settings
+22. visual refinements
+
+---
+
+# 46. ENGINEERING REQUIREMENT
+
+Before changing the UI, inspect the existing repository.
+
+Determine:
+
+* current frontend framework
+* current backend
+* existing API routes
+* existing database
+* current components
+* current state management
+* current mock data
+* current scan implementation
+
+Do not blindly rewrite working code.
+
+Reuse existing functionality where possible.
+
+Refactor where necessary.
+
+---
+
+# 47. FINAL QUALITY BAR
+
+The finished application must feel like a serious prototype that could be demonstrated to:
+
+* cybersecurity researchers
+* defence technology evaluators
+* security engineers
+* AI/ML experts
+* software security teams
+
+It should NOT feel like a student CRUD application.
+
+The visual experience should be polished, but the functionality is more important than visual decoration.
+
+The judges should immediately understand:
+
+> "This system autonomously discovers a vulnerability, reasons about it, reproduces it, generates a fix, applies the fix, runs regression tests, and independently proves that the vulnerability no longer exists."
+
+---
+
+# 48. FINAL PRODUCT MESSAGE
+
+The entire product should reinforce this statement:
+
+# AI KAVACH
+
+### AUTONOMOUS CYBER-REASONING
+
+**Find it. Prove it. Fix it. Prove it again.**
+
+Supporting line:
+
+> A lightweight, sandboxed cyber-reasoning system combining LLM reasoning, static analysis, AI-guided fuzzing, dynamic validation and regression testing to produce evidence-backed proof of remediation.
+
+---
+
+# 49. IMPORTANT FINAL INSTRUCTION
+
+Do NOT only modify the colors and layout.
+
+This is a **full product evolution**.
+
+First inspect the existing codebase.
+
+Then:
+
+1. preserve useful existing components
+2. redesign information architecture
+3. implement the scan state machine
+4. implement realistic demo/simulation backend where real integrations are unavailable
+5. connect frontend to real state
+6. implement evidence generation
+7. implement vulnerability → patch → regression → verification flow
+8. build the Scan Room
+9. build Proof of Fix
+10. build Demo Mode
+11. build reporting
+12. finally polish the UI
+
+After implementation, test the complete flow from:
+
+```text
+REGISTER PROJECT
+      ↓
+START SCAN
+      ↓
+FIND VULNERABILITY
+      ↓
+REASON
+      ↓
+FUZZ
+      ↓
+DYNAMIC VALIDATION
+      ↓
+PATCH
+      ↓
+REGRESSION
+      ↓
+VERIFY
+      ↓
+PROOF OF FIX
+      ↓
+EXPORT REPORT
+```
+
+Every step must be functional or clearly represented by a deterministic simulation layer.
+
+Do not leave placeholder buttons.
+
+Do not leave dead navigation.
+
+Do not use fake metrics without labeling them.
+
+Do not expose hidden LLM chain-of-thought.
+
+Do not claim official military deployment or certification.
+
+The final result should be a **hackathon-ready autonomous cyber-reasoning product**, not merely a dashboard.

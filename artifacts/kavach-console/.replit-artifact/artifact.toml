@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "AI Kavach"
+description = "An autonomous cyber-reasoning console that scans vulnerable software, reproduces security findings, generates a remediation plan, and presents machine-verifiable proof that the fix holds."
+version = "1.0.0"
+id = "artifacts/kavach-console"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21921
+
+[services.development]
+run = "pnpm --filter @workspace/kavach-console run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kavach-console", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kavach-console/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21921"
+BASE_PATH = "/"

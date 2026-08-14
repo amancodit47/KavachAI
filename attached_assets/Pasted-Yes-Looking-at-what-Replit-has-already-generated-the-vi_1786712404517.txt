@@ -1,0 +1,172 @@
+Yes. Looking at what Replit has already generated, the **visual foundation is actually good**, but right now it looks more like a generic cybersecurity SaaS dashboard. For this hackathon, you need to turn it into a **serious autonomous cyber-reasoning / proof-of-fix platform** that directly maps to the AI Kavach problem statement and the Indian Army Terrier Cyber Quest 2026 context.
+
+The biggest change I would make is:
+
+> **Do not redesign it as just a dashboard. Redesign it as a working cyber-operation console where the UI visibly demonstrates the complete autonomous loop: Discover → Reason → Fuzz → Validate → Patch → Regression → Prove.**
+
+Also, the current UI contains things like **"24 surfaces"**, **"assurance baseline 96"**, etc. If these are not backed by actual functionality, they should not be presented as real metrics. The demo should clearly distinguish **live/verified results** from demo/sample data.
+
+Below is the **master prompt I would give directly to Replit Agent**. It is intentionally detailed so Replit understands that this is a **full product refactor, not merely a UI makeover**.
+
+# AI KAVACH — AUTONOMOUS CYBER-REASONING & PROOF-OF-FIX PLATFORM
+
+You are working on an existing project called **AI Kavach**.
+
+The current project already contains a dark cybersecurity dashboard UI with:
+
+* Overview
+* Protected Projects
+* Scan History
+* Security Desk
+* Project registration
+* Scan-related UI
+* Assurance score
+* Agent activity
+* Military Logistics API demo project
+
+The current UI is visually good but is currently too much like a generic cybersecurity SaaS dashboard.
+
+Your task is to **completely evolve the existing application into a polished, functional hackathon-grade autonomous cyber-reasoning platform** aligned with the following problem statement:
+
+> Build a cyber-reasoning system — an LLM laced with fuzzers, static and dynamic analysis, and a regression test harness — that autonomously finds a vulnerability, patches it, and proves the fix holds.
+
+The product will be presented in the **Indian Army Terrier Cyber Quest 2026 / AI Kavach context**, where the final prototype is expected to work against a simulated defence-oriented software environment and be evaluated for:
+
+* Performance
+* Speed
+* Precision
+* Functionality
+* Scalability
+* Resource utilisation
+* Novelty
+* Lightweight architecture
+
+The central product principle must be:
+
+# "DON'T JUST DETECT. PROVE THE FIX."
+
+The application should communicate that AI Kavach is an **autonomous cyber-reasoning and remediation system**, not merely a vulnerability scanner or AI chatbot.
+
+---
+
+# 1. CORE PRODUCT CONCEPT
+
+The entire application must revolve around this closed-loop workflow:
+
+```text
+TARGET REPOSITORY / APPLICATION
+          ↓
+RECONNAISSANCE
+          ↓
+STATIC ANALYSIS
+          ↓
+AI CYBER REASONING
+          ↓
+VULNERABILITY HYPOTHESIS
+          ↓
+AI-GUIDED FUZZING
+          ↓
+DYNAMIC VALIDATION
+          ↓
+VULNERABILITY CONFIRMED
+          ↓
+PATCH GENERATION
+          ↓
+PATCH APPLICATION
+          ↓
+REGRESSION TEST HARNESS
+          ↓
+POST-PATCH STATIC + DYNAMIC RESCAN
+          ↓
+INDEPENDENT VERIFICATION
+          ↓
+PROOF OF FIX
+          ↓
+EVIDENCE-GRADE SECURITY REPORT
+```
+
+This workflow must be visible throughout the product.
+
+The system should feel like an autonomous security engineer operating inside a secure environment.
+
+---
+
+# 2. IMPORTANT DESIGN PRINCIPLE
+
+Do NOT make the application look like:
+
+* a normal vulnerability scanner
+* a generic ChatGPT chatbot
+* a SIEM
+* a generic DevSecOps dashboard
+* a collection of disconnected charts
+
+Instead, make it feel like:
+
+**A cyber operations / security engineering console used to investigate, validate, remediate and prove vulnerabilities.**
+
+The UI should communicate:
+
+* precision
+* trust
+* evidence
+* autonomy
+* controlled execution
+* secure environment
+* explainability
+* operational readiness
+
+---
+
+# 3. VISUAL DESIGN SYSTEM
+
+Keep the strong visual foundation of the existing UI, but improve it significantly.
+
+## Overall aesthetic
+
+Use:
+
+* dark command-console aesthetic
+* near-black/navy background
+* subtle grid
+* subtle technical/cyber texture
+* restrained green accent
+* amber for warnings
+* red only for confirmed critical findings
+* blue/cyan for informational states
+* strong typography hierarchy
+* compact technical labels
+* monospace typography for technical metadata
+* clean modern sans-serif for headings
+
+Do NOT make it look like a gaming website.
+
+Do NOT use excessive neon.
+
+Do NOT use excessive glowing effects.
+
+The design should look appropriate for:
+
+* defence cybersecurity
+* SOC/Security Operations
+* critical infrastructure
+* secure engineering
+* enterprise security research
+
+---
+
+# 4. BRANDING
+
+Product name:
+
+# AI KAVACH
+
+Subtitle:
+
+**AUTONOMOUS CYBER-REASONING PLATFORM**
+
+Use the concept:
+
+> Kavach = Shield
+
+M...

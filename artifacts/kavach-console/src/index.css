@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+@theme inline {
+  --color-background: hsl(var(--background)); --color-foreground: hsl(var(--foreground)); --color-border: hsl(var(--border)); --color-input: hsl(var(--input)); --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card)); --color-card-foreground: hsl(var(--card-foreground)); --color-primary: hsl(var(--primary)); --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary)); --color-secondary-foreground: hsl(var(--secondary-foreground)); --color-muted: hsl(var(--muted)); --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent)); --color-accent-foreground: hsl(var(--accent-foreground)); --color-destructive: hsl(var(--destructive)); --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-sidebar: hsl(var(--sidebar)); --color-sidebar-foreground: hsl(var(--sidebar-foreground)); --color-sidebar-border: hsl(var(--sidebar-border));
+  --font-sans: var(--app-font-sans); --font-mono: var(--app-font-mono);
+}
+:root {
+  --background: 222 24% 8%; --foreground: 44 25% 92%; --border: 218 18% 20%; --input: 218 18% 23%; --ring: 157 70% 47%;
+  --card: 222 22% 11%; --card-foreground: 44 25% 92%; --primary: 157 70% 47%; --primary-foreground: 222 28% 8%;
+  --secondary: 221 18% 16%; --secondary-foreground: 44 20% 84%; --muted: 221 18% 15%; --muted-foreground: 218 12% 59%;
+  --accent: 35 92% 61%; --accent-foreground: 222 28% 8%; --destructive: 4 76% 62%; --destructive-foreground: 44 25% 92%;
+  --sidebar: 224 29% 6%; --sidebar-foreground: 44 25% 92%; --sidebar-border: 218 20% 15%;
+  --app-font-sans: 'Plus Jakarta Sans', sans-serif; --app-font-mono: 'IBM Plex Mono', monospace; --radius: .65rem;
+}
+.dark { --background: 222 24% 8%; --foreground: 44 25% 92%; --border: 218 18% 20%; --input: 218 18% 23%; --ring: 157 70% 47%; --card: 222 22% 11%; --card-foreground: 44 25% 92%; --primary: 157 70% 47%; --primary-foreground: 222 28% 8%; --secondary: 221 18% 16%; --secondary-foreground: 44 20% 84%; --muted: 221 18% 15%; --muted-foreground: 218 12% 59%; --accent: 35 92% 61%; --accent-foreground: 222 28% 8%; --destructive: 4 76% 62%; --destructive-foreground: 44 25% 92%; --sidebar: 224 29% 6%; --sidebar-foreground: 44 25% 92%; --sidebar-border: 218 20% 15%; --app-font-sans: 'Plus Jakarta Sans', sans-serif; --app-font-mono: 'IBM Plex Mono', monospace; }
+* { box-sizing: border-box; }
+html { background: hsl(var(--background)); }
+body { margin: 0; min-width: 320px; background: hsl(var(--background)); color: hsl(var(--foreground)); font-family: var(--app-font-sans); }
+button, input, textarea, select { font: inherit; } button { cursor: pointer; }
+::selection { background: hsl(var(--primary) / .25); color: hsl(var(--foreground)); }
+.k-shell { min-height: 100dvh; background: radial-gradient(circle at 88% 0%, hsl(157 50% 18% / .11), transparent 28rem), hsl(var(--background)); }
+.k-sidebar { width: 248px; background: hsl(var(--sidebar)); border-right: 1px solid hsl(var(--sidebar-border)); }
+.k-main { min-width: 0; } .k-grid { background-image: linear-gradient(hsl(var(--border) / .18) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border) / .18) 1px, transparent 1px); background-size: 32px 32px; }
+.k-card { border: 1px solid hsl(var(--border)); background: linear-gradient(145deg, hsl(var(--card) / .98), hsl(222 23% 9% / .92)); border-radius: var(--radius); }
+.k-card-hover { transition: transform .22s ease, border-color .22s ease, background-color .22s ease; } .k-card-hover:hover { transform: translateY(-2px); border-color: hsl(var(--primary) / .45); background-color: hsl(222 24% 13%); }
+.k-boundary { border: 1px solid hsl(var(--accent) / .24); background: linear-gradient(105deg, hsl(var(--accent) / .09), hsl(var(--card) / .7)); }
+.k-proof-card { background: linear-gradient(115deg, hsl(var(--primary) / .07), hsl(var(--card) / .98) 42%, hsl(var(--accent) / .045)); }
+.k-toggle { appearance: none; width: 2.6rem; height: 1.45rem; flex: 0 0 auto; border: 1px solid hsl(var(--border)); border-radius: 999px; background: hsl(var(--muted)); position: relative; transition: background-color .18s ease, border-color .18s ease; }
+.k-toggle::after { content: ''; position: absolute; left: .18rem; top: .18rem; width: 1rem; height: 1rem; border-radius: 999px; background: hsl(var(--muted-foreground)); transition: transform .18s ease, background-color .18s ease; }
+.k-toggle:checked { border-color: hsl(var(--primary) / .6); background: hsl(var(--primary) / .3); }
+.k-toggle:checked::after { transform: translateX(1.1rem); background: hsl(var(--primary)); }
+.k-mono { font-family: var(--app-font-mono); } .k-eyebrow { font: 600 10px/1.2 var(--app-font-mono); letter-spacing: .16em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+.k-focus:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+.k-button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: .45rem; padding: .66rem .9rem; font-size: .76rem; font-weight: 700; transition: transform .18s ease, background-color .18s ease, border-color .18s ease; }
+.k-button:hover { transform: translateY(-1px); } .k-button:disabled { opacity: .55; cursor: wait; transform: none; }
+.k-button-primary { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); } .k-button-primary:hover { background: hsl(157 70% 55%); }
+.k-button-ghost { background: hsl(var(--secondary) / .65); color: hsl(var(--secondary-foreground)); border: 1px solid hsl(var(--border)); } .k-button-ghost:hover { border-color: hsl(var(--primary) / .5); background: hsl(var(--secondary)); }
+.k-input { width: 100%; border: 1px solid hsl(var(--input)); border-radius: .45rem; background: hsl(222 24% 8%); padding: .7rem .75rem; color: hsl(var(--foreground)); font-size: .8rem; transition: border-color .18s ease, box-shadow .18s ease; }
+.k-input:focus { outline: none; border-color: hsl(var(--primary) / .8); box-shadow: 0 0 0 3px hsl(var(--primary) / .1); } .k-input::placeholder { color: hsl(var(--muted-foreground) / .75); }
+.k-label { display: block; margin-bottom: .4rem; font: 600 10px/1.2 var(--app-font-mono); letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+.k-pill { display: inline-flex; align-items: center; gap: .35rem; border: 1px solid hsl(var(--border)); border-radius: 999px; padding: .3rem .55rem; font: 600 10px var(--app-font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.k-status-live { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .28); background: hsl(var(--primary) / .08); } .k-status-warn { color: hsl(var(--accent)); border-color: hsl(var(--accent) / .3); background: hsl(var(--accent) / .08); }
+.k-status-danger { color: hsl(var(--destructive)); border-color: hsl(var(--destructive) / .3); background: hsl(var(--destructive) / .08); } .k-status-muted { color: hsl(var(--muted-foreground)); background: hsl(var(--muted) / .5); }
+.k-reveal { animation: k-reveal .45s ease both; } .k-reveal-1 { animation-delay: .07s; } .k-reveal-2 { animation-delay: .14s; } .k-reveal-3 { animation-delay: .21s; }
+@keyframes k-reveal { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } } @keyframes k-pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } } .k-pulse { animation: k-pulse 1.5s ease-in-out infinite; }
+.k-noise::after { content: ''; pointer-events: none; position: fixed; inset: 0; opacity: .025; z-index: 50; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E"); }
+@media (max-width: 767px) { .k-sidebar { width: 100%; height: auto; border-right: 0; border-bottom: 1px solid hsl(var(--sidebar-border)); } .k-nav-links { display: flex; overflow-x: auto; } .k-nav-link { flex: 0 0 auto; } .k-content { padding: 1.1rem; } }
